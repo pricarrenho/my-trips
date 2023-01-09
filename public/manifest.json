@@ -1,0 +1,22 @@
+{
+  "orientation": "portrait",
+  "name": "Priscilla Carrenho",
+  "short_name": "Priscilla Carrenho",
+  "description": "Priscilla Carrenho desenvolvedora Front End - Site portfólio",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#04070E",
+  "background_color": "#04070E",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import Leaflet from "leaflet";
+import Leaflet, { LatLngExpression } from "leaflet";
 import * as S from "./styles";
 
 type Place = {
@@ -42,11 +42,12 @@ const CustomTileLayer = () => {
 
 const Map = ({ places }: MapProps) => {
   const router = useRouter();
+  const brazilCoordinates: LatLngExpression = [-15, -47];
 
   return (
     <S.MapWrapper>
       <MapContainer
-        center={[0, 0]}
+        center={brazilCoordinates}
         zoom={3}
         style={{ height: "100%", width: "100%" }}
         minZoom={3}

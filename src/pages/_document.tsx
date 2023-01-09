@@ -49,6 +49,7 @@ export default class MyDocument extends Document {
             integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
             crossOrigin=""
           />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
