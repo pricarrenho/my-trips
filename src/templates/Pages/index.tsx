@@ -15,6 +15,7 @@ const PageTemplate = ({ heading, body }: PageTemplateProps) => (
     </LinkWrapper>
 
     <S.Heading>{heading}</S.Heading>
+
     <S.Body>
       <div dangerouslySetInnerHTML={{ __html: body }} />
     </S.Body>
