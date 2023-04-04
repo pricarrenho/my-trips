@@ -6,7 +6,7 @@
   <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-preview">Preview</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-Getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>
 </p>
 
 ## 🧪 Technologies
@@ -29,6 +29,16 @@ Clone the project and access the folder
 
 ```bash
 $ git clone https://github.com/pricarrenho/my-trips && cd my-trips
+```
+
+```bash
+# Add your environment variable based on .env.example
+GRAPHQL_HOST= // hygraph host - https://hygraph.com/
+GRAPHQL_TOKEN= // hygraph token
+NEXT_PUBLIC_MAPBOX_API_KEY= // mapbox token - https://www.mapbox.com/
+NEXT_PUBLIC_MAPBOX_USERID= // mapbox user id
+NEXT_PUBLIC_MAPBOX_STYLEID= // mapbox host
+
 ```
 
 Follow the steps below
@@ -57,6 +67,10 @@ $ yarn start
 
 [My Trips](https://my-trips.pricarrenho.com.br) was developed to validate knowledge in React.
 
+<br/>
+
 ---
 
-<p align="center">Made with 💜 by Priscilla Carrenho</p>
+<p align="center">
+Made with 💜 by <a href="https://www.pricarrenho.com.br">Priscilla Carrenho</a> 
+</p>
