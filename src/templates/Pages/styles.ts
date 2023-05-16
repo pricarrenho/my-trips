@@ -35,7 +35,7 @@ export const Body = styled.div`
   @media (max-width: 700px) {
     p,
     a {
-      font-size: var(--medium);
+      font-size: var(--small);
     }
   }
 `;
