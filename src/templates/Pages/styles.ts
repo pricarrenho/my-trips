@@ -1,41 +1,47 @@
 import styled from "styled-components";
 
 export const Content = styled.section`
-  text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  height: 100vh;
-  max-width: var(--container);
-  margin: auto;
+  justify-content: center;
+  gap: 16px;
+  padding-top: 72px;
 
-  @media (max-width: 700px) {
-    padding: var(--small);
+  @media (min-width: 800px) {
+    padding-top: 120px;
   }
 `;
 
 export const Heading = styled.h1`
-  font-size: var(--large);
-  margin-bottom: var(--large);
+  font-size: 40px;
 
-  @media (max-width: 700px) {
-    font-size: var(--medium);
-    margin-bottom: var(--small);
+  @media (min-width: 800px) {
+    font-size: 48px;
   }
 `;
 
 export const Body = styled.div`
-  p,
-  a {
-    font-size: var(--medium);
-    line-height: var(--large);
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
-  @media (max-width: 700px) {
+  p,
+  a {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  @media (min-width: 800px) {
+    div {
+      gap: 18px;
+    }
+
     p,
     a {
-      font-size: var(--small);
+      font-size: 36px;
+      line-height: 56px;
     }
   }
 `;
