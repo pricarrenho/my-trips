@@ -1,47 +1,54 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Content = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 16px;
-  padding-top: 72px;
+  padding: 72px 0px;
 
   @media (min-width: 800px) {
-    padding-top: 120px;
+    padding: 120px 0px;
   }
 `;
 
 export const Heading = styled.h1`
-  font-size: 40px;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxl};
 
-  @media (min-width: 800px) {
-    font-size: 48px;
-  }
+    @media (min-width: 800px) {
+      font-size: ${theme.font.sizes.xxxl};
+    }
+  `}
 `;
 
 export const Body = styled.div`
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+  ${({ theme }) => css`
+    text-align: center;
 
-  p,
-  a {
-    font-size: 24px;
-    line-height: 40px;
-  }
-
-  @media (min-width: 800px) {
     div {
-      gap: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
     p,
     a {
-      font-size: 36px;
-      line-height: 56px;
+      font-size: ${theme.font.sizes.lg};
+      line-height: 40px;
     }
-  }
+
+    @media (min-width: 800px) {
+      div {
+        gap: 18px;
+      }
+
+      p,
+      a {
+        font-size: ${theme.font.sizes.xl};
+        line-height: 56px;
+      }
+    }
+  `}
 `;

@@ -41,13 +41,13 @@ type MenuContainerProps = {
 };
 
 export const MenuContainer = styled.div<MenuContainerProps>`
-  ${({ expanded }) => css`
+  ${({ expanded, theme }) => css`
     position: fixed;
     top: 20px;
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: ${theme.colors.red};
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -67,43 +67,54 @@ export const MenuContainer = styled.div<MenuContainerProps>`
 `;
 
 export const Hamburger = styled.button`
-  width: 30px;
-  height: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  border: none;
-  background-color: white;
-  cursor: pointer;
+  ${({ theme }) => css`
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    border: none;
+    background-color: ${theme.colors.red};
+    cursor: pointer;
+  `}
 `;
 
 export const Line = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: red;
+  ${({ theme }) => css`
+    width: 100%;
+    height: 3px;
+    background-color: ${theme.colors.white};
+  `}
 `;
 
 export const ExpandedMenu = styled.div`
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  color: white;
-  font-size: 24px;
+  ${({ theme }) => css`
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-size: ${theme.font.sizes.lg};
+
+    a {
+      color: ${theme.colors.white};
+    }
+  `}
 `;
 
 export const CloseButton = styled.button`
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  font-size: 32px;
-  border: none;
-  background-color: transparent;
-  color: red;
-  cursor: pointer;
+  ${({ theme }) => css`
+    position: fixed;
+    top: 48px;
+    right: 16px;
+    font-size: ${theme.font.sizes.xl};
+    border: none;
+    background-color: transparent;
+    color: ${theme.colors.red};
+    cursor: pointer;
+  `}
 `;

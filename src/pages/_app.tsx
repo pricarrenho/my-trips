@@ -1,25 +1,29 @@
 import { AppProps } from "next/app";
-import NextNProgress from "nextjs-progressbar";
-import GlobalStyles from "../styles/global";
-import SEO from "../../next-seo.config";
+import { GlobalStyle } from "../styles/global";
 import { DefaultSeo } from "next-seo";
+import NextNProgress from "nextjs-progressbar";
+import SEO from "../../next-seo.config";
+import { ThemeProvider } from "styled-components";
+import { themeDefault } from "../styles/theme";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo {...SEO} />
+      <ThemeProvider theme={themeDefault}>
+        <DefaultSeo {...SEO} />
 
-      <GlobalStyles />
+        <GlobalStyle />
 
-      <NextNProgress
-        color=" #FF0000"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
-        showOnShallow={true}
-      />
+        <NextNProgress
+          color=" #FF0000"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height={3}
+          showOnShallow={true}
+        />
 
-      <Component {...pageProps} />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

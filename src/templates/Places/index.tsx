@@ -1,10 +1,11 @@
 import LinkWrapper from "../../components/LinkWrapper";
-import Image from "next/legacy/image";
+
 import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
 
 import * as S from "./styles";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
+import { Container } from "../../components/Container";
 
 type ImageProps = {
   url: string;
@@ -58,29 +59,29 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
         <CloseOutline size={32} aria-label="Go back to map" />
       </LinkWrapper>
 
-      <S.Wrapper>
-        <S.Container>
-          <S.Heading>{place.name}</S.Heading>
+      <Container>
+        <S.Wrapper>
+          <S.Content>
+            <S.Heading>{place.name}</S.Heading>
 
-          <S.Body
-            dangerouslySetInnerHTML={{ __html: place.description?.html || "" }}
-          />
+            <S.Body
+              dangerouslySetInnerHTML={{
+                __html: place.description?.html || "",
+              }}
+            />
+          </S.Content>
 
           <S.Gallery>
             {place.gallery.map((image, index) => (
-              <Image
+              <S.Image
                 key={`photo-${index}`}
                 src={image.url}
                 alt={place.name}
-                width={1000}
-                height={600}
-                quality={75}
-                objectFit={"contain"}
               />
             ))}
           </S.Gallery>
-        </S.Container>
-      </S.Wrapper>
+        </S.Wrapper>
+      </Container>
     </>
   );
 }

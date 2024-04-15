@@ -1,44 +1,70 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
-  padding: var(--large) var(--medium);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 72px 0px;
 
-  @media (max-width: 700px) {
-    padding: var(--medium) var(--small);
-    margin-top: var(--medium);
+  @media (min-width: 800px) {
+    padding: 120px 0px;
   }
 `;
 
-export const Container = styled.section`
-  max-width: var(--container);
-  margin: auto;
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 `;
 
 export const Heading = styled.h1`
-  font-size: var(--large);
-  margin-bottom: var(--medium);
-  text-align: center;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xxl};
 
-  @media (max-width: 700px) {
-    font-size: var(--medium);
-  }
+    @media (min-width: 800px) {
+      font-size: ${theme.font.sizes.xxxl};
+    }
+  `}
 `;
 
 export const Body = styled.div`
-  margin-bottom: var(--large);
-  p {
-    margin-bottom: var(--medium);
+  ${({ theme }) => css`
     text-align: center;
-  }
 
-  @media (max-width: 700px) {
     p {
-      font-size: var(--small);
+      font-size: ${theme.font.sizes.lg};
+      line-height: 40px;
     }
-  }
+
+    @media (min-width: 800px) {
+      p {
+        font-size: ${theme.font.sizes.xl};
+        line-height: 56px;
+      }
+    }
+  `}
 `;
 
 export const Gallery = styled.div`
-  display: grid;
-  grid-gap: var(--medium);
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+`;
+
+export const Image = styled.img`
+  border-radius: 4px;
+  width: 343px;
+  height: 206px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+
+  @media (min-width: 800px) {
+    min-width: 500px;
+    min-height: 320px;
+  }
 `;
