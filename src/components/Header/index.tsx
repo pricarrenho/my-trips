@@ -10,9 +10,9 @@ export const Header = () => {
 
   return (
     <S.Header>
-      <S.Menu onClick={toggleMenu} isOpen={menuOpen}>
+      <S.MenuToggle onClick={toggleMenu} isOpen={menuOpen}>
         <div />
-      </S.Menu>
+      </S.MenuToggle>
 
       <S.MenuBackground isOpen={menuOpen} />
 

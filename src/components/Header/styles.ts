@@ -1,36 +1,43 @@
-import styled, { css } from "styled-components";
+import styled, { DefaultTheme, css } from "styled-components";
 
 export const Header = styled.header``;
 
-type MenuProps = {
+type MenuToggleProps = {
   isOpen: boolean;
 };
 
-const MenuModifier = {
-  isOpen: () => css`
+const MenuToggleModifier = {
+  isOpen: (theme: DefaultTheme) => css`
     &:before {
       transform: translateY(12px) rotate(135deg);
       margin-left: 2px;
     }
+
     &:after {
       transform: translateY(-12px) rotate(-135deg);
       margin-top: 11px;
       margin-left: 2px;
     }
+
     & div {
       transform: scale(0);
+    }
+
+    &:before,
+    &:after,
+    div {
+      background: ${theme.colors.white};
     }
   `,
 };
 
-export const Menu = styled.button<MenuProps>`
+export const MenuToggle = styled.button<MenuToggleProps>`
   ${({ isOpen, theme }) => css`
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: ${theme.colors.white};
+    top: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
     border: none;
     border-radius: 50%;
 
@@ -40,6 +47,8 @@ export const Menu = styled.button<MenuProps>`
     align-items: center;
     cursor: pointer;
     z-index: 999;
+
+    background-color: transparent;
 
     &:before,
     &:after,
@@ -55,7 +64,7 @@ export const Menu = styled.button<MenuProps>`
       transition: 0.5s;
     }
 
-    ${isOpen && MenuModifier.isOpen}
+    ${isOpen && MenuToggleModifier.isOpen(theme)}
   `}
 `;
 
@@ -64,25 +73,27 @@ type MenuBackgroundProps = {
 };
 
 const MenuBackgroundModifier = {
-  isOpen: () => css`
+  isOpen: (theme: DefaultTheme) => css`
     transform: scale(100);
+    background-color: ${theme.colors.menu};
+    transition: transform 0.8s, background-color 0.3s;
   `,
 };
 
 export const MenuBackground = styled.div<MenuBackgroundProps>`
   ${({ isOpen, theme }) => css`
     position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #091525;
+    top: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background-color: ${theme.colors.white};
     border: none;
     border-radius: 50%;
     z-index: 997;
-    transition: transform 0.8s;
+    transition: transform 0.8s, background-color 0.3s linear 0.3s;
 
-    ${isOpen && MenuBackgroundModifier.isOpen}
+    ${isOpen && MenuBackgroundModifier.isOpen(theme)}
   `}
 `;
 
