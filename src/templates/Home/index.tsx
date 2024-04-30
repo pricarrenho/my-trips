@@ -1,6 +1,4 @@
 import dynamic from "next/dynamic";
-import { InfoOutline } from "@styled-icons/evaicons-outline/InfoOutline";
-import LinkWrapper from "../../components/LinkWrapper";
 import { MapProps } from "../../components/Map";
 import { NextSeo } from "next-seo";
 import { Header } from "../../components/Header";

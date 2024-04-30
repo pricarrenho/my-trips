@@ -6,7 +6,8 @@ import {
   GetPlacesQuery,
 } from "../../graphql/generate/graphql";
 import { GET_PLACES, GET_PLACE_BY_SLUG } from "../../graphql/queries";
-import PlacesTemplate, { PlacesTemplateProps } from "../../templates/Places";
+import PlacesTemplate from "../../templates/Places";
+import { PlacesTemplateProps } from "../../templates/Places/types";
 
 export default function Place({ place }: PlacesTemplateProps) {
   const router = useRouter();

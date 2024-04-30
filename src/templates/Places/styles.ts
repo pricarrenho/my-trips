@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Wrapper = styled.div`
+export const Content = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,13 +11,6 @@ export const Wrapper = styled.div`
   @media (min-width: 800px) {
     padding: 120px 0px;
   }
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
 `;
 
 export const Heading = styled.h1`
@@ -34,13 +27,25 @@ export const Body = styled.div`
   ${({ theme }) => css`
     text-align: center;
 
-    p {
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    p,
+    a {
       font-size: ${theme.font.sizes.lg};
       line-height: 40px;
     }
 
     @media (min-width: 800px) {
-      p {
+      div {
+        gap: 18px;
+      }
+
+      p,
+      a {
         font-size: ${theme.font.sizes.xl};
         line-height: 56px;
       }

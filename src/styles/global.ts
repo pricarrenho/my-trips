@@ -34,7 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      color: ${theme.colors.red};
       text-decoration: none;
     }
 

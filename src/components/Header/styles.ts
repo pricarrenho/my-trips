@@ -144,7 +144,14 @@ export const Ul = styled.ul`
 
 export const Li = styled.li`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.lg};
+    a {
+      color: ${theme.colors.white};
+      font-size: ${theme.font.sizes.lg};
+      transition: color 0.2s;
+
+      &:hover {
+        color: ${theme.colors.neutral[400]};
+      }
+    }
   `}
 `;
