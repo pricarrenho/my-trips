@@ -44,7 +44,11 @@ export const Body = styled.div`
     }
 
     a {
-      color: ${theme.colors.red};
+      color: ${theme.colors.neutral[500]};
+
+      &:hover {
+        color: ${theme.colors.red};
+      }
     }
 
     @media (min-width: 800px) {
