@@ -4,50 +4,55 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 60px 0px;
   gap: 48px;
-  padding: 72px 0px;
 
   @media (min-width: 800px) {
-    padding: 120px 0px;
+    padding: 140px 0px;
   }
+`;
+
+export const ContentContainer = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    background-color: ${theme.colors.neutral[800]};
+    padding: 24px;
+    border-radius: 8px;
+  `}
 `;
 
 export const Heading = styled.h1`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xxl};
+    font-size: ${theme.font.sizes.xl};
 
     @media (min-width: 800px) {
-      font-size: ${theme.font.sizes.xxxl};
+      font-size: ${theme.font.sizes.xxl};
     }
   `}
 `;
 
 export const Body = styled.div`
   ${({ theme }) => css`
-    text-align: center;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     p,
     a {
-      font-size: ${theme.font.sizes.lg};
+      font-size: ${theme.font.sizes.mmd};
       line-height: 40px;
     }
 
     @media (min-width: 800px) {
-      div {
-        gap: 18px;
-      }
+      gap: 16px;
 
       p,
       a {
-        font-size: ${theme.font.sizes.xl};
-        line-height: 56px;
+        font-size: ${theme.font.sizes.lg};
+        line-height: 48px;
       }
     }
   `}
@@ -55,8 +60,8 @@ export const Body = styled.div`
 
 export const Gallery = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 16px;
   flex-wrap: wrap;
 `;
 
@@ -69,7 +74,7 @@ export const Image = styled.img`
   display: block;
 
   @media (min-width: 800px) {
-    min-width: 500px;
+    min-width: 530px;
     min-height: 320px;
   }
 `;

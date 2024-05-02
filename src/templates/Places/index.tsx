@@ -12,17 +12,9 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
   return (
     <>
       <Container>
+        <Header />
+
         <S.Content>
-          <Header />
-
-          <S.Heading>{place.name}</S.Heading>
-
-          <S.Body
-            dangerouslySetInnerHTML={{
-              __html: place.description?.html || "",
-            }}
-          />
-
           <S.Gallery>
             {place.gallery.map((image, index) => (
               <S.Image
@@ -32,6 +24,16 @@ export default function PlacesTemplate({ place }: PlacesTemplateProps) {
               />
             ))}
           </S.Gallery>
+
+          <S.ContentContainer>
+            <S.Heading>{place.name}</S.Heading>
+
+            <S.Body
+              dangerouslySetInnerHTML={{
+                __html: place.description?.html || "",
+              }}
+            />
+          </S.ContentContainer>
         </S.Content>
       </Container>
     </>

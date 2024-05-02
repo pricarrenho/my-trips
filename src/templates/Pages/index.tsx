@@ -5,14 +5,14 @@ import * as S from "./styles";
 
 const PageTemplate = ({ heading, body }: PageTemplateProps) => (
   <Container>
+    <Header />
+
     <S.Content>
-      <Header />
+      <S.ContentContainer>
+        <S.Heading>{heading}</S.Heading>
 
-      <S.Heading>{heading}</S.Heading>
-
-      <S.Body>
-        <div dangerouslySetInnerHTML={{ __html: body }} />
-      </S.Body>
+        <S.Body dangerouslySetInnerHTML={{ __html: body }} />
+      </S.ContentContainer>
     </S.Content>
   </Container>
 );

@@ -26,7 +26,7 @@ const MenuToggleModifier = {
     &:before,
     &:after,
     div {
-      background: ${theme.colors.white};
+      background: ${theme.colors.neutral[300]};
     }
   `,
 };
@@ -145,12 +145,12 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   ${({ theme }) => css`
     a {
-      color: ${theme.colors.white};
+      color: ${theme.colors.neutral[300]};
       font-size: ${theme.font.sizes.lg};
       transition: color 0.2s;
 
       &:hover {
-        color: ${theme.colors.neutral[400]};
+        color: ${theme.colors.white};
       }
     }
   `}
