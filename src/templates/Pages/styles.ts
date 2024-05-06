@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Content = styled.section`
-  padding: 72px 0px;
+  padding: 114px 0px;
 
   @media (min-width: 800px) {
     padding: 140px 0px;
@@ -24,10 +24,14 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
     background-color: ${theme.colors.neutral[800]};
     padding: 24px;
     border-radius: 8px;
+
+    @media (min-width: 800px) {
+      padding: 48px;
+    }
   `}
 `;
 
@@ -35,7 +39,7 @@ export const Body = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 
     p,
     a {
@@ -52,12 +56,12 @@ export const Body = styled.div`
     }
 
     @media (min-width: 800px) {
-      gap: 16px;
+      gap: 24px;
 
       p,
       a {
         font-size: ${theme.font.sizes.lg};
-        line-height: 48px;
+        line-height: 34px;
       }
     }
   `}

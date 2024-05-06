@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
     #__next {
       height: 100%;
       background: var(--background);
-      color: ${theme.colors.white};
+      color: ${theme.colors.neutral[200]};
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     }

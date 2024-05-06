@@ -4,7 +4,7 @@ export const Content = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 0px;
+  padding: 114px 0px;
   gap: 48px;
 
   @media (min-width: 800px) {
@@ -19,8 +19,12 @@ export const ContentContainer = styled.div`
     justify-content: center;
     gap: 24px;
     background-color: ${theme.colors.neutral[800]};
-    padding: 24px;
+    padding: 40px;
     border-radius: 8px;
+
+    @media (min-width: 800px) {
+      padding: 48px;
+    }
   `}
 `;
 
@@ -38,21 +42,21 @@ export const Body = styled.div`
   ${({ theme }) => css`
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 16px;
 
     p,
     a {
       font-size: ${theme.font.sizes.mmd};
-      line-height: 40px;
+      line-height: 26px;
     }
 
     @media (min-width: 800px) {
-      gap: 16px;
+      gap: 24px;
 
       p,
       a {
         font-size: ${theme.font.sizes.lg};
-        line-height: 48px;
+        line-height: 34px;
       }
     }
   `}
