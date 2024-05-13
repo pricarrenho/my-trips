@@ -42,13 +42,13 @@ const CustomTileLayer = () => {
 
 const Map = ({ places }: MapProps) => {
   const router = useRouter();
-  const brazilCoordinates: LatLngExpression = [-15, -47];
+  const brazilCoordinates: LatLngExpression = [-26, -55];
 
   return (
     <S.MapWrapper>
       <MapContainer
         center={brazilCoordinates}
-        zoom={3}
+        zoom={4}
         style={{ height: "100%", width: "100%" }}
         minZoom={3}
         maxBounds={[
