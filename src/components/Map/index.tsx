@@ -1,21 +1,8 @@
 import { useRouter } from "next/router";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import Leaflet, { LatLngExpression } from "leaflet";
+import { MapProps } from "./types";
 import * as S from "./styles";
-
-type Place = {
-  id: string;
-  name: string;
-  slug: string;
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-};
-
-export type MapProps = {
-  places?: Place[];
-};
 
 const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 const MAPBOX_USERID = process.env.NEXT_PUBLIC_MAPBOX_USERID;

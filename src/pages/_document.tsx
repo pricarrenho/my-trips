@@ -41,14 +41,13 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="shortcut icon" href="/img/icon-512.png" />
-          <link rel="apple-touch-icon" href="/img/icon-512.png" />
           <link
             rel="stylesheet"
             href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
             integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
             crossOrigin=""
           />
+          <link rel="icon" href="img/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
