@@ -28,7 +28,7 @@ export const Header = () => {
 
           <S.Li>
             <Link onClick={toggleMenu} href={"/about"}>
-              Sobre a página
+              Sobre
             </Link>
           </S.Li>
 
