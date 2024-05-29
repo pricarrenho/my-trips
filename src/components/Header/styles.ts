@@ -150,7 +150,7 @@ export const Li = styled.li`
       transition: color 0.2s;
 
       &:hover {
-        color: ${theme.colors.white};
+        color: ${theme.colors.red[200]};
       }
     }
   `}

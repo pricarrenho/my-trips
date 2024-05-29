@@ -1,7 +1,10 @@
 const colors = {
   black: "#000000",
   white: "#ffffff",
-  red: "#ff0000",
+  red: {
+    100: "#ff0000",
+    200: "#ad1616",
+  },
   menu: "#091525",
   neutral: {
     200: "#e5e5e5",

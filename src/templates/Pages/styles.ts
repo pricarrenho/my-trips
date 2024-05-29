@@ -48,11 +48,16 @@ export const Body = styled.div`
     }
 
     a {
-      color: ${theme.colors.neutral[500]};
+      color: ${theme.colors.red[100]};
+      transition: color 0.2s;
 
       &:hover {
-        color: ${theme.colors.red};
+        color: ${theme.colors.red[200]};
       }
+    }
+
+    p:has(a) {
+      margin-bottom: -16px;
     }
 
     @media (min-width: 800px) {
